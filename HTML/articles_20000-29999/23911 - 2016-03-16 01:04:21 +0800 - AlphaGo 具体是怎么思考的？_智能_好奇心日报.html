@@ -1,0 +1,53 @@
+<h1>AlphaGo 具体是怎么思考的？_智能_好奇心日报
+</h1><p><img src="http://img.qdaily.com/article/article_show/20160702131918nl8egIpyk5b0a1fW.jpg?imageMogr2/auto-orient/thumbnail/!755x450r/gravity/Center/crop/755x450/ignore-error/1"></p><div class="article-detail-bd"><div class="author-share clearfix">   <div class="author">  <a rel="nofollow" href="javascript:void(0)" class="avatar x32 circle"><img src="http://img.qdaily.com/user/face/20160702200102VWlZP9dCsS40x8qa.jpg?imageMogr2/auto-orient/thumbnail/!80x80r/gravity/Center/crop/80x80/ignore-error/1"/> </a>  <span class="name">马若飞 </span><span class="date smart-date" data-origindate="2016-03-16 01:04:21 +0800"/><script language="JavaScript" type="text/javascript"><![CDATA[var o="div",a=" style='disp",b="lay:",c="none'";document.write("<"+o+a+b+c+">")]]></script><span class="date">2016-03-16 01:04:21</span><script language="JavaScript" type="text/javascript"><![CDATA[var o="div";document.write("</"+o+">")]]></script></div>      <div class="com-share-favor" data-id="23911" data-title="《AlphaGo 具体是怎么思考的？》，来自@好奇心日报" data-pic="http://img.qdaily.com/article/article_show/20160702131918nl8egIpyk5b0a1fW.jpg?imageMogr2/auto-orient/thumbnail/!640x380r/gravity/Center/crop/640x380/ignore-error/1" data-url="http://www.qdaily.com/articles/23911.html?search_hxx09" data-weiboappkey="2462590045"><div class="share-favor-bd clearfix"><a rel="nofollow" data-ga-event="pc:share:weixin" href="javascript:void(0)" class="share iconfont icon-weixin"/><a rel="nofollow" data-ga-event="pc:share:weibo" href="http://service.weibo.com/share/share.php" class="share iconfont icon-weibo"/><a rel="nofollow" data-ga-event="pc:share:tengxunweixin" href="http://share.v.t.qq.com/index.php" class="share iconfont icon-tengxunweibo"/><a rel="nofollow" data-ga-event="pc:share:kongjian" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey" class="share iconfont icon-kongjian"/><a rel="nofollow" data-ga-event="pc:share:douban" href="http://www.douban.com/share/service" class="share iconfont icon-douban"/><a rel="nofollow" data-ga-event="pc:share:linkedin" href="http://www.linkedin.com/shareArticle" class="share iconfont icon-linkedin"/>  <a rel="nofollow" data-ga-event="pc:favor:aritcle" href="#" class="favor iconfont icon-heart"><span class="num  smart-count" data-origincount="287"/></a>  </div></div> </div>  <p class="excerpt">蒙特卡洛、深度学习，忽略这些“名词”之后你会觉得它没那么难以理解</p>  <div class="detail">  
+
+<p class="">看了 AlphaGo 和李世乭九段这 5 场比赛之后，你知道 AlphaGo 是怎么思考的吗？<br/></p>
+<p>其实，AlphaGo 的“思考”和人类的思考有些相似，所以它的胜利才显得意义重大。</p>
+<p>想要知道 AlphaGo 怎么下围棋，简单了解围棋的规则非常重要。</p>
+<h2>10 分钟围棋入门</h2>
+<p>顾名思义，“围棋”的要点在于“围”。围棋棋盘是 19 × 19 的格状棋盘，黑子和白字在交叉点上交替落子，哪一方“围”的地盘大便获胜。</p>
+<p>如何计算“地盘”？每当棋盘上落下一子，便会出现与该子横或竖相邻的四个交叉点，这四个点被称为“气”，一颗棋子最多拥有四口“气”，斜方向相邻的交叉点不是气。</p>
+<p>横或竖相邻的同色棋子可以共用“气”。如果一个字或几个字周围所有的气都被对方棋子占据，没有气的棋子就是死子。</p>
+<p><img data-format="jpg" data-ratio="0.398595" class="lazyloadd lazyload" alt="" src="http://img.qdaily.com/uploads/20160918124606JSpdaCk3eAlgqD5x.jpg-w600"/></p>
+<div class="com-insert-images"><figure style="margin:0;">&#13;
+    <img alt="" class="lazyload" data-ratio="0.31759259" data-format="jpeg" src="http://img.qdaily.com/uploads/20160702131916U9MNq4eJmjTbS8yA.jpg-w600"/>&#13;
+<figcaption class="">左侧图中 A 点若落下白字，则两颗黑子没有气，被杀死提走。<p>右侧图中棋子周围的的点表示气，双方棋子可以共用气。</p></figcaption></figure></div>
+<p>在这样的规则要求下，胜负的关键便在于如何高效地用棋子占据更大的地盘，同时还要防止对方将你已经占据的位置围死。围棋开局时一般从靠近边缘的地方开始落子也是因为相对于棋盘中央，边缘方便用更少的棋子占据更大的地方。</p>
+<p>围棋棋盘一共有 361 个落子点，平均分配的话，一方棋子占据的位置加上活棋围住的落子点只要超过 180.5 个就会胜利。但先落下第一个子的黑棋占有优势，按照中国规则，在计算棋子数量时，黑棋必须减掉 3 又 3/4 子，也就是必须超过 185 子才能获胜。</p>
+<p>有的棋局会在未下完时，便因为对方已经占据了无法追赶的优势而认输。而有的棋局双方会进行到“收官”的阶段，这里不再展开。</p>
+<p>以上，是围棋的简单的基础规则，但因为棋盘很大，围棋的战术千变万化。</p>
+<h2>AlphaGo 如何思考</h2>
+<p>说起这个，“穷举”、“蒙特卡罗树算法”、“深度学习”等等一大堆术语经常出现。</p>
+<p>所谓 “深度学习”，是 AlphaGo 围棋训练的第一步，将人类棋谱输入计算机，学习人类的落子习惯。这种“识别”与人脸识别、图像分类等搜索技术类似。</p>
+<p><b>第一步：</b></p>
+<p>AlphaGo 会把输入系统的人类棋谱的每一步进行分拆，棋盘上每个落子以及随后的应对落子算作一个样本，AlphaGo 从这些人类棋局中分解出了三千多万个样本。</p>
+<p>这些样本集合在一起，能够识别出每个特定的落子之后，哪一种应对方法的概率最高，这个最高的概率其实就是人类棋手最喜欢的应对方法。</p>
+<p>虽然说围棋“千古无同局”，但是局部来看还是有很多相似的模式反复出现，AlphaGo 就学会了这些最受欢迎的下法。</p>
+<div class="com-insert-images"><figure class="">&#13;
+    <img alt="" class="lazyload" data-ratio="0.32685185" data-format="jpeg" src="http://img.qdaily.com/uploads/20160702131917JMYeynWT6LZP10ES.jpg-w600"/>&#13;
+<figcaption class=""><div style="text-align: center;">  AlphaGo 的蒙特卡洛树搜索。图片来自 Nature  </div></figcaption></figure></div>
+<p><b>第二步：</b></p>
+<p>AlphaGo 的思考结合了蒙特卡罗树搜索。</p>
+<p>假设一个从来都没下过围棋的人，用了分身术分成两个人开始在棋盘上乱下，最终这盘棋也会分出个胜负。第二盘，上一盘赢的那个分身不再完全是乱下了，开始使用赢的那一盘中的一些对应，第三盘棋，第二盘赢的那个分身开始使用第一盘和第二盘中的对应。当第 N 盘棋下完之后，这个始终赢棋的分身就会获得最有可能获胜的落子方法。</p>
+<p>以上这 N 盘棋就是一步使用蒙特卡罗树搜索的思考过程，思考结束后的下一个落子，就是被是推演过次数最多，获胜概率最高的那一步。</p>
+<p>AlphaGo 团队还改进了以上这种传统的蒙特卡罗树搜索算法。</p>
+<p>上面我们说过的深度神经网络得出了一套人类棋手概率最高的下法，假设蒙特卡罗树搜索故事中那个完全不会下棋的人学习了这套下法，那么之后的“乱下”思考过程的起点就会提高很多。这样一来，蒙特卡罗树算法的计算量就减少很多，提高了效率。</p>
+<p><b>第三步：</b></p>
+<p>AlphaGo 自己和自己下棋。 围棋毕竟变化太多，AlphaGo 需要更多的棋局来学习，于是通过自我对弈产生新的棋局。</p>
+<p>AlphaGo 自己和自己下棋，棋力的来源就是第一步通过学习人类棋局得到的落子方法。AlphaGo 左右互搏，自我对弈几万盘，就能总结出赢棋概率更高的新下法，接下来再用新下法自我对弈几万盘，以此类推，最终得到了一套棋力比最初只学习人类下法厉害很多的新策略。</p>
+<p>那用这新的策略和蒙特卡罗树搜索结合是不是更厉害呢？答案却是否。</p>
+<p>因为使用概率来训练的这种策略会让下法高度集中，变化太少，而蒙特卡罗树搜索需要更多的变化才更有效。</p>
+<div class="com-insert-images"><figure class="">&#13;
+    <img alt="" class="lazyload" data-ratio="0.71203704" data-format="jpeg" src="http://img.qdaily.com/uploads/201607021319173eGYHbhFg2cI7XxN.jpg-w600"/>&#13;
+<figcaption class=""><div style="text-align: center;">AlphaGo 在与樊麾对决时的局面评估。图片来自 Nature</div></figcaption></figure></div>
+<p>第四步：局面评估。这也是 AlphaGo 最厉害的地方是，它可以像人类一样在比赛过程中估计局面的优劣，这样才有第四局它判断获胜几率太小，选择中盘认输。</p>
+<p>当一盘棋开始的时候，AlphaGo 先用第一步训练的下法下若干步，然后乱下一步，接着用第三步自我对弈训练产生的更厉害的下法下完整盘棋，然后对结果做一个评估，评估出“乱下”的那步棋造成的局面是好是坏。</p>
+<p>AlphaGo 可以在一步的思考中乱下很多次，总有一次能匹配到真实对下棋的状况。而对这一步乱下以及后续结果的评估，就是对当前局面的判断。</p>
+<h2>围棋 AI 和其它棋类 AI 区别很大</h2>
+<p>大家对战胜卡斯帕罗夫的“深蓝”有一些误解。深蓝并不是单纯的“穷举”，通过计算所有的可能性来实现胜利。深蓝的算力约为每秒 2 亿步棋，想要穷尽国际象棋十的四十五次方这个级别的可能性需要十的二十九次方年的时间，这显然不可能。</p>
+<p>深蓝内置了数百万人类国际象棋的开局库，这部分计算可以省掉，同时深蓝也不是算出所有可能的步法，而是推算 12 步左右，而人类的国际象棋大师大约能够推算 10 步，胜负就在这其中产生。</p>
+<p>AlphaGo 每秒钟可以计算几百万步棋，通过大量学习人类棋局，用这些经验自我对弈产生新的经验，用这些新经验来下棋，再利用蒙特卡罗树搜索产生下一步对应的下法，配合“乱下”产生的对局面的评估，就是 AlphaGo 战胜人类顶尖棋手的秘密。</p>
+<p class="">参考文献：<a href="http://www.nature.com/nature/journal/v529/n7587/full/nature16961.html">Mastering the game of Go with deep neural networks and tree search.</a>——Nature 2016.1.27</p>
+
+
+ <div class="embed-mask"><div class="embed-bd"><span class="triangle"/><div class="play"/></div><div class="embed-control"><span class="player"/><div class="bar"><span/></div><span class="sound iconfont icon-shengyin"/></div></div><p><img data-format="jpg" data-ratio="0.456667" class="lazyload lazylood" src="http://img.qdaily.com/uploads/20160725204735MvuXsg6iz3bhj7yi.jpg-w600" alt=""/></p><p class="lazylood">喜欢这篇文章？去 App 商店搜 <a href="http://m.qdaily.com/mobile/downloads/empty/2">好奇心日报</a> ，每天看点不一样的。</p></div></div>

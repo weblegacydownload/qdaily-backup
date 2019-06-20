@@ -1,0 +1,38 @@
+<h1>记得半年前的“心脏流血”么？现在来了 Bash，更可怕_智能_好奇心日报
+</h1><p><img src="http://img.qdaily.com/article/article_show/20160604221644ZGEnVKPdj7pRXMrH.jpg?imageMogr2/auto-orient/thumbnail/!755x450r/gravity/Center/crop/755x450/ignore-error/1"></p><div class="article-detail-bd"><div class="author-share clearfix">   <div class="author">  <a rel="nofollow" href="javascript:void(0)" class="avatar x32 circle"><img src="http://img.qdaily.com/user/face/20160702184015OQWqMzXGY0pHcgSD.png?imageMogr2/auto-orient/thumbnail/!80x80r/gravity/Center/crop/80x80/ignore-error/1"/> </a>  <span class="name">夏雨青</span><span class="date smart-date" data-origindate="2014-09-26 00:28:20 +0800"/><script language="JavaScript" type="text/javascript"><![CDATA[var o="div",a=" style='disp",b="lay:",c="none'";document.write("<"+o+a+b+c+">")]]></script><span class="date">2014-09-26 00:28:20</span><script language="JavaScript" type="text/javascript"><![CDATA[var o="div";document.write("</"+o+">")]]></script></div>      <div class="com-share-favor" data-id="2568" data-title="《记得半年前的“心脏流血”么？现在来了 Bash，更可怕》，来自@好奇心日报" data-pic="http://img.qdaily.com/article/article_show/20160604221644ZGEnVKPdj7pRXMrH.jpg?imageMogr2/auto-orient/thumbnail/!640x380r/gravity/Center/crop/640x380/ignore-error/1" data-url="http://www.qdaily.com/articles/2568" data-weiboappkey="2462590045"><div class="share-favor-bd clearfix"><a rel="nofollow" data-ga-event="pc:share:weixin" href="javascript:void(0)" class="share iconfont icon-weixin"/><a rel="nofollow" data-ga-event="pc:share:weibo" href="http://service.weibo.com/share/share.php" class="share iconfont icon-weibo"/><a rel="nofollow" data-ga-event="pc:share:tengxunweixin" href="http://share.v.t.qq.com/index.php" class="share iconfont icon-tengxunweibo"/><a rel="nofollow" data-ga-event="pc:share:kongjian" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey" class="share iconfont icon-kongjian"/><a rel="nofollow" data-ga-event="pc:share:douban" href="http://www.douban.com/share/service" class="share iconfont icon-douban"/><a rel="nofollow" data-ga-event="pc:share:linkedin" href="http://www.linkedin.com/shareArticle" class="share iconfont icon-linkedin"/>  <a rel="nofollow" data-ga-event="pc:favor:aritcle" href="#" class="favor iconfont icon-heart"><span class="num  smart-count" data-origincount="5"/></a>  </div></div> </div>  <p class="excerpt">美国国土安全局和红帽公司共同发出警告：Bash 漏洞来了，它可能比“心脏流血”更可怕。加州大学伯克利分校 ICSI 的研究员 Nicholoas Weaver 评价：“它隐蔽，丑陋，而且会陪伴我们许多年。”</p>  <div class="detail">  
+
+<p class="p1">&#13;
+	昨天，美国国土安全局计算机应急响应小组 <a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6271">(US-CERT) 发布了一则警告</a>，漏洞 Shell Shock（又被称为 Bash Bug）可能严重威胁计算机安全。&#13;
+</p>&#13;
+<p class="p1">&#13;
+	这个漏洞波及了所有 *nix 系统，你可能没听过这个词，但你平时一定在用它们。从 Mac OS X 系统、Android 手机到很多公用设施背后的操作系统，都属于 *nix。就算你是一位彻底的 Windows 用户，也免不了登录使用 Linux 服务器的网站。&#13;
+</p>&#13;
+<p>&#13;
+	Shell Shock 存在了 22 年之久，可以追溯到 1.14 版本的 GNU Bash。漏洞允许攻击者远程在终端内执行代码。Apache 服务器、路由终端和物联网设备都可能受到影响。&#13;
+</p>&#13;
+<p class="p1">&#13;
+	这个漏洞由 <a href="http://stephane.chazelas.free.fr/">Stephane Chazelas</a> 首先发现，开源系统<a href="https://securityblog.redhat.com/2014/09/24/bash-specially-crafted-environment-variables-code-injection-attack/">红帽公司随后在官方博客上回应</a>并证实了这件事。紧接着，US-CERT 给这个漏洞的危险程度打了最高的 10 分（非常危险），破解难度被评为“低”。&#13;
+</p>&#13;
+<p class="p1">&#13;
+	这个漏洞又被称为“Bash”漏洞，源于它利用的是 Linux 和 Unix 系统里广泛使用的 Bash shell。Bash 是很多开源系统里默认的命令行终端。&#13;
+</p>&#13;
+<p class="p1">&#13;
+	<a href="http://blog.erratasec.com/2014/09/bash-bug-as-big-as-heartbleed.html#.VCO62SmSya1">安全公司 Errata Security 的 Robert Graham 在博客里写到</a>，“Bash Bug 与 ‘Heartbleed 心脏流血’ 一样严重……第一个原因是它与软件交互的方式让人措手不及。” 与著名的 OpenSSL Heartbleed（心脏流血） 漏洞相似的是，它们波及的范围之大，很难估计具体有多少软件和硬件会受到影响。&#13;
+</p>&#13;
+<p class="p1">&#13;
+	他补充道，“第二个原因是尽管很多系统打上了补丁，还有一些不知名的系统没有补丁。像是摄像头之类的物联网设备尤其容易被攻击，因为很多这类设备的软件是由基于网页端的 bash 脚本实现的。”这类设备的漏洞利用价值更大，却更难被打上补丁。&#13;
+</p>
+<p><img data-format="jpg" data-ratio="0.420881" class="lazylod lazyload" alt="" src="http://img.qdaily.com/uploads/20160918124612v5wnh60OmgCAUPGJ.jpg-w600"/></p>&#13;
+<p class="p2">&#13;
+	<span class="s1"/> &#13;
+</p>&#13;
+<p class="p1">&#13;
+	所以这件事对非 Linux 用户的影响是？你不需要<a href="http://gawker.com/shell-shock-could-give-hackers-keys-to-your-website-1638788627?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+gawker%2Ffull+(Gawker)">像某些媒体建议的那样</a>，关上电脑几个月等危机过去。目前大部分厂商都已经发布了升级补丁，很多厂商都在紧急下线维护他们的 Linux 服务器。&#13;
+</p>&#13;
+<p class="p1">&#13;
+	Robert Graham 说，“任何查到 bash 漏洞的估计都是一台需要打补丁的老设备。既然它们中的大多数都不能打补丁，你很有可能完蛋了。” 加州大学伯克利分校 ICSI 的研究员 Nicholoas Weaver 则评价：“它隐蔽，丑陋，而且会陪伴我们许多年。”&#13;
+</p>
+
+
+
+ <div class="embed-mask"><div class="embed-bd"><span class="triangle"/><div class="play"/></div><div class="embed-control"><span class="player"/><div class="bar"><span/></div><span class="sound iconfont icon-shengyin"/></div></div><p><img data-format="jpg" data-ratio="0.456667" class="lazyload lazylood" src="http://img.qdaily.com/uploads/20160725204735MvuXsg6iz3bhj7yi.jpg-w600" alt=""/></p><p class="lazylood">喜欢这篇文章？去 App 商店搜 <a href="http://m.qdaily.com/mobile/downloads/empty/2">好奇心日报</a> ，每天看点不一样的。</p></div></div>
